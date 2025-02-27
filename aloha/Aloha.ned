@@ -15,9 +15,9 @@
 network Aloha
 {
     parameters:
-        int numHosts;  // number of hosts
-        double txRate @unit(bps);  // transmission rate
-        double slotTime @unit(ms);  // zero means no slots (pure Aloha)
+        int numHosts;  // numero de host en la red
+        double txRate @unit(bps);  // bps es la velocidad de transmision 
+        double slotTime @unit(ms);  //define si usamos ranuras de tiempo o si estas sin =0
         @display("bgi=background/terrain,s;bgb=1000,1000");
     submodules:
         server: Server;
