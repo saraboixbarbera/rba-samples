@@ -1,26 +1,29 @@
-file 13191 1740693531                                           
+file 9936 1740693729                                            
 version 3
-run RBAAloha-0-20250227-22:58:46-12040
-attr configname RBAAloha
-attr datetime 20250227-22:58:46
-attr datetimef 20250227-225846
-attr experiment RBAAloha
+run PureAlohaExperiment-11-20250227-23:02:06-7544
+attr configname PureAlohaExperiment
+attr datetime 20250227-23:02:06
+attr datetimef 20250227-230206
+attr experiment PureAlohaExperiment
 attr inifile omnetpp.ini
-attr iterationvars ""
-attr iterationvarsd ""
-attr iterationvarsf ""
-attr measurement ""
+attr iterationvars "$numHosts=15, $iaMean=3"
+attr iterationvarsd numHosts=15/iaMean=3
+attr iterationvarsf numHosts=15,iaMean=3-
+attr measurement "$numHosts=15, $iaMean=3"
 attr network Aloha
-attr processid 12040
+attr processid 7544
 attr repetition 0
 attr replication #0
 attr resultdir results
-attr runnumber 0
-attr seedset 0
-config description "pure Aloha, overloaded"
-config Aloha.host[*].iaTime exponential(2s)
-config repeat 3
+attr runnumber 11
+attr seedset 11
+itervar iaMean 3
+itervar numHosts 15
+config description "Channel utilization in the function of packet generation frequency"
+config repeat 1
 config sim-time-limit 10s
+config Aloha.numHosts 15
+config Aloha.host[*].iaTime exponential(3s)
 config network Aloha
 config Aloha.numHosts 20
 config Aloha.slotTime 0s
@@ -118,51 +121,21 @@ attr enum IDLE=0,TRANSMIT=1
 attr recordingmode vector
 attr source state
 attr title "Radio state"
-vector 17 Aloha.host[15] radioState:vector ETV
-attr enum IDLE=0,TRANSMIT=1
-attr recordingmode vector
-attr source state
-attr title "Radio state"
-vector 18 Aloha.host[16] radioState:vector ETV
-attr enum IDLE=0,TRANSMIT=1
-attr recordingmode vector
-attr source state
-attr title "Radio state"
-vector 19 Aloha.host[17] radioState:vector ETV
-attr enum IDLE=0,TRANSMIT=1
-attr recordingmode vector
-attr source state
-attr title "Radio state"
-vector 20 Aloha.host[18] radioState:vector ETV
-attr enum IDLE=0,TRANSMIT=1
-attr recordingmode vector
-attr source state
-attr title "Radio state"
-vector 21 Aloha.host[19] radioState:vector ETV
-attr enum IDLE=0,TRANSMIT=1
-attr recordingmode vector
-attr source state
-attr title "Radio state"
-0	4254 3189 0 333 0 9.900800129369 136 0 2 162 288
-1	7443 769 14 333 0.412408051882 9.900800129369 20 0 0.27788333207726 2.0927544572899 0.28426360007655
-2	8212 199 0 250 0 6.97803952182 9 0 1 4 4
-3	8411 248 0 316 0 9.403688291588 11 0 1 5 5
-4	8659 437 0 328 0 9.787981099177 19 0 1 9 9
-5	9096 290 0 309 0 9.058939922815 13 0 1 6 6
-6	9386 198 0 321 0 9.630806898335 9 0 1 4 4
-7	9584 246 0 264 0 7.289089612584 11 0 1 5 5
-8	9830 194 0 239 0 6.772703951876 9 0 1 4 4
-9	10024 247 0 290 0 8.505064709821 11 0 1 5 5
-10	10271 257 0 172 0 5.059210471398 11 0 1 5 5
-11	10528 108 0 150 0 4.233253632818 5 0 1 2 2
-12	10636 149 0 275 0 7.580954249922 7 0 1 3 3
-13	10785 154 0 90 0 3.025405867102 7 0 1 3 3
-14	10939 210 0 305 0 8.988043107662 9 0 1 4 4
-15	11149 556 0 317 0 9.456541888244 23 0 1 11 11
-16	11705 358 0 332 0 9.900798578338 15 0 1 7 7
-17	12063 206 0 257 0 7.138265705766 9 0 1 4 4
-18	12269 204 0 145 0 4.188266033872 9 0 1 4 4
-19	12473 156 0 225 0 6.562989131383 7 0 1 3 3
-20	12629 156 0 263 0 7.245432238919 7 0 1 3 3
-21	12785 404 0 327 0 9.757293800654 17 0 1 8 8
+0	3735 2018 0 192 0 9.940192105874 87 0 2 73 113
+1	5753 1515 11 185 0.372401103586 9.295013498492 40 0 0.27160351322087 7.1565980949032 1.3504938263902
+2	7268 192 0 179 0 9.024040454256 9 0 1 4 4
+3	7460 9 0 0 0 0 1 0 0 0 0
+4	7469 246 0 190 0 9.891954603086 11 0 1 5 5
+5	7715 9 0 0 0 0 1 0 0 0 0
+6	7724 335 0 191 0 9.940190960541 15 0 1 7 7
+7	8059 151 0 170 0 8.896991656704 7 0 1 3 3
+8	8210 146 0 68 0 3.82162628702 7 0 1 3 3
+9	8356 238 0 180 0 9.064186387331 11 0 1 5 5
+10	8594 157 0 168 0 8.854148959117 7 0 1 3 3
+11	8751 160 0 184 0 9.295010670512 7 0 1 3 3
+12	8911 58 0 94 0 5.214954694752 3 0 1 1 1
+13	8969 204 0 119 0 7.153747085318 9 0 1 4 4
+14	9173 254 0 178 0 9.012467049067 11 0 1 5 5
+15	9427 152 0 87 0 4.885305034817 7 0 1 3 3
+16	9579 355 0 169 0 8.855882035072 15 0 1 7 7
 

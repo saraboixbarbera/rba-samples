@@ -1,6 +1,6 @@
 out/clang-release//Server.o: Server.cc Server.h \
-  C:/omnetpp-6.0.2/include/omnetpp.h
+  D:/omnet/omnetpp-6.1/include/omnetpp.h
 
 Server.h:
 
-C:/omnetpp-6.0.2/include/omnetpp.h:
+D:/omnet/omnetpp-6.1/include/omnetpp.h:

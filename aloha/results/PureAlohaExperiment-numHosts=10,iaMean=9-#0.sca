@@ -1,0 +1,351 @@
+version 3
+run PureAlohaExperiment-8-20250227-23:01:20-4100
+attr configname PureAlohaExperiment
+attr datetime 20250227-23:01:20
+attr datetimef 20250227-230120
+attr experiment PureAlohaExperiment
+attr inifile omnetpp.ini
+attr iterationvars "$numHosts=10, $iaMean=9"
+attr iterationvarsd numHosts=10/iaMean=9
+attr iterationvarsf numHosts=10,iaMean=9-
+attr measurement "$numHosts=10, $iaMean=9"
+attr network Aloha
+attr processid 4100
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 8
+attr seedset 8
+itervar iaMean 9
+itervar numHosts 10
+config description "Channel utilization in the function of packet generation frequency"
+config repeat 1
+config sim-time-limit 10s
+config Aloha.numHosts 10
+config Aloha.host[*].iaTime exponential(9s)
+config network Aloha
+config Aloha.numHosts 20
+config Aloha.slotTime 0s
+config Aloha.txRate 9.6kbps
+config Aloha.host[*].pkLenBits 952b
+config **.x "uniform(0m, 1000m)"
+config **.y "uniform(0m, 1000m)"
+config **.animationHoldTimeOnCollision 0s
+config **.idleAnimationSpeed 1
+config **.transmissionEdgeAnimationSpeed 1e-6
+config **.midTransmissionAnimationSpeed 1e-1
+
+par Aloha.server typename "\"Server\""
+par Aloha.server x 873.429m
+attr unit m
+par Aloha.server y 11.1144m
+attr unit m
+par Aloha.server animationHoldTimeOnCollision 0s
+attr unit s
+scalar Aloha.server duration 10
+statistic Aloha.server collisionLength:histogram
+field count 2
+field mean 0.1641914463475
+field stddev 0.019625541050835
+field min 0.150314093186
+field max 0.178068799509
+field sum 0.328382892695
+field sqrsum 0.054302823968906
+attr recordingmode histogram
+attr title "collision length"
+bin	-inf	0
+bin	0.143	0
+bin	0.1435	0
+bin	0.144	0
+bin	0.1445	0
+bin	0.145	0
+bin	0.1455	0
+bin	0.146	0
+bin	0.1465	0
+bin	0.147	0
+bin	0.1475	0
+bin	0.148	0
+bin	0.1485	0
+bin	0.149	0
+bin	0.1495	0
+bin	0.15	1
+bin	0.1505	0
+bin	0.151	0
+bin	0.1515	0
+bin	0.152	0
+bin	0.1525	0
+bin	0.153	0
+bin	0.1535	0
+bin	0.154	0
+bin	0.1545	0
+bin	0.155	0
+bin	0.1555	0
+bin	0.156	0
+bin	0.1565	0
+bin	0.157	0
+bin	0.1575	0
+bin	0.158	0
+bin	0.1585	0
+bin	0.159	0
+bin	0.1595	0
+bin	0.16	0
+bin	0.1605	0
+bin	0.161	0
+bin	0.1615	0
+bin	0.162	0
+bin	0.1625	0
+bin	0.163	0
+bin	0.1635	0
+bin	0.164	0
+bin	0.1645	0
+bin	0.165	0
+bin	0.1655	0
+bin	0.166	0
+bin	0.1665	0
+bin	0.167	0
+bin	0.1675	0
+bin	0.168	0
+bin	0.1685	0
+bin	0.169	0
+bin	0.1695	0
+bin	0.17	0
+bin	0.1705	0
+bin	0.171	0
+bin	0.1715	0
+bin	0.172	0
+bin	0.1725	0
+bin	0.173	0
+bin	0.1735	0
+bin	0.174	0
+bin	0.1745	0
+bin	0.175	0
+bin	0.1755	0
+bin	0.176	0
+bin	0.1765	0
+bin	0.177	0
+bin	0.1775	0
+bin	0.178	1
+bin	0.1785	0
+bin	0.179	0
+bin	0.1795	0
+bin	0.18	0
+bin	0.1805	0
+bin	0.181	0
+bin	0.1815	0
+bin	0.182	0
+bin	0.1825	0
+bin	0.183	0
+bin	0.1835	0
+bin	0.184	0
+bin	0.1845	0
+bin	0.185	0
+bin	0.1855	0
+scalar Aloha.server collisionLength:mean 0.1641914463475
+attr recordingmode mean
+attr title "collision length, mean"
+scalar Aloha.server collisionLength:sum 0.328382892695
+attr recordingmode sum
+attr title "collision length, sum"
+scalar Aloha.server collisionLength:max 0.178068799509
+attr recordingmode max
+attr title "collision length, max"
+statistic Aloha.server collisionMultiplicity:histogram
+field count 2
+field mean 2
+field stddev 0
+field min 2
+field max 2
+field sum 4
+field sqrsum 8
+attr recordingmode histogram
+attr source collision
+attr title "collision multiplicity"
+bin	-inf	0
+bin	1	0
+bin	2	2
+bin	3	0
+scalar Aloha.server collidedFrames:last 4
+attr recordingmode last
+attr source sum(collision)
+attr title "collided frames, last"
+scalar Aloha.server receivedFrames:last 7
+attr recordingmode last
+attr source sum(receive)
+attr title "received frames, last"
+par Aloha.host[0] typename "\"Host\""
+par Aloha.host[0] txRate 9600bps
+attr unit bps
+par Aloha.host[0] pkLenBits 952b
+attr unit b
+par Aloha.host[0] iaTime exponential(9s)
+attr unit s
+par Aloha.host[0] slotTime 0s
+attr unit s
+par Aloha.host[0] x 968.541m
+attr unit m
+par Aloha.host[0] y 239.44m
+attr unit m
+par Aloha.host[0] idleAnimationSpeed 1
+par Aloha.host[0] transmissionEdgeAnimationSpeed 1e-06
+par Aloha.host[0] midTransmissionAnimationSpeed 0.1
+par Aloha.host[0] controlAnimationSpeed true
+par Aloha.host[1] typename "\"Host\""
+par Aloha.host[1] txRate 9600bps
+attr unit bps
+par Aloha.host[1] pkLenBits 952b
+attr unit b
+par Aloha.host[1] iaTime exponential(9s)
+attr unit s
+par Aloha.host[1] slotTime 0s
+attr unit s
+par Aloha.host[1] x 869.195m
+attr unit m
+par Aloha.host[1] y 377.517m
+attr unit m
+par Aloha.host[1] idleAnimationSpeed 1
+par Aloha.host[1] transmissionEdgeAnimationSpeed 1e-06
+par Aloha.host[1] midTransmissionAnimationSpeed 0.1
+par Aloha.host[1] controlAnimationSpeed true
+par Aloha.host[2] typename "\"Host\""
+par Aloha.host[2] txRate 9600bps
+attr unit bps
+par Aloha.host[2] pkLenBits 952b
+attr unit b
+par Aloha.host[2] iaTime exponential(9s)
+attr unit s
+par Aloha.host[2] slotTime 0s
+attr unit s
+par Aloha.host[2] x 530.856m
+attr unit m
+par Aloha.host[2] y 816.461m
+attr unit m
+par Aloha.host[2] idleAnimationSpeed 1
+par Aloha.host[2] transmissionEdgeAnimationSpeed 1e-06
+par Aloha.host[2] midTransmissionAnimationSpeed 0.1
+par Aloha.host[2] controlAnimationSpeed true
+par Aloha.host[3] typename "\"Host\""
+par Aloha.host[3] txRate 9600bps
+attr unit bps
+par Aloha.host[3] pkLenBits 952b
+attr unit b
+par Aloha.host[3] iaTime exponential(9s)
+attr unit s
+par Aloha.host[3] slotTime 0s
+attr unit s
+par Aloha.host[3] x 232.728m
+attr unit m
+par Aloha.host[3] y 422.351m
+attr unit m
+par Aloha.host[3] idleAnimationSpeed 1
+par Aloha.host[3] transmissionEdgeAnimationSpeed 1e-06
+par Aloha.host[3] midTransmissionAnimationSpeed 0.1
+par Aloha.host[3] controlAnimationSpeed true
+par Aloha.host[4] typename "\"Host\""
+par Aloha.host[4] txRate 9600bps
+attr unit bps
+par Aloha.host[4] pkLenBits 952b
+attr unit b
+par Aloha.host[4] iaTime exponential(9s)
+attr unit s
+par Aloha.host[4] slotTime 0s
+attr unit s
+par Aloha.host[4] x 11.3988m
+attr unit m
+par Aloha.host[4] y 612.033m
+attr unit m
+par Aloha.host[4] idleAnimationSpeed 1
+par Aloha.host[4] transmissionEdgeAnimationSpeed 1e-06
+par Aloha.host[4] midTransmissionAnimationSpeed 0.1
+par Aloha.host[4] controlAnimationSpeed true
+par Aloha.host[5] typename "\"Host\""
+par Aloha.host[5] txRate 9600bps
+attr unit bps
+par Aloha.host[5] pkLenBits 952b
+attr unit b
+par Aloha.host[5] iaTime exponential(9s)
+attr unit s
+par Aloha.host[5] slotTime 0s
+attr unit s
+par Aloha.host[5] x 430.469m
+attr unit m
+par Aloha.host[5] y 766.063m
+attr unit m
+par Aloha.host[5] idleAnimationSpeed 1
+par Aloha.host[5] transmissionEdgeAnimationSpeed 1e-06
+par Aloha.host[5] midTransmissionAnimationSpeed 0.1
+par Aloha.host[5] controlAnimationSpeed true
+par Aloha.host[6] typename "\"Host\""
+par Aloha.host[6] txRate 9600bps
+attr unit bps
+par Aloha.host[6] pkLenBits 952b
+attr unit b
+par Aloha.host[6] iaTime exponential(9s)
+attr unit s
+par Aloha.host[6] slotTime 0s
+attr unit s
+par Aloha.host[6] x 402.351m
+attr unit m
+par Aloha.host[6] y 401.925m
+attr unit m
+par Aloha.host[6] idleAnimationSpeed 1
+par Aloha.host[6] transmissionEdgeAnimationSpeed 1e-06
+par Aloha.host[6] midTransmissionAnimationSpeed 0.1
+par Aloha.host[6] controlAnimationSpeed true
+par Aloha.host[7] typename "\"Host\""
+par Aloha.host[7] txRate 9600bps
+attr unit bps
+par Aloha.host[7] pkLenBits 952b
+attr unit b
+par Aloha.host[7] iaTime exponential(9s)
+attr unit s
+par Aloha.host[7] slotTime 0s
+attr unit s
+par Aloha.host[7] x 522.675m
+attr unit m
+par Aloha.host[7] y 872.089m
+attr unit m
+par Aloha.host[7] idleAnimationSpeed 1
+par Aloha.host[7] transmissionEdgeAnimationSpeed 1e-06
+par Aloha.host[7] midTransmissionAnimationSpeed 0.1
+par Aloha.host[7] controlAnimationSpeed true
+par Aloha.host[8] typename "\"Host\""
+par Aloha.host[8] txRate 9600bps
+attr unit bps
+par Aloha.host[8] pkLenBits 952b
+attr unit b
+par Aloha.host[8] iaTime exponential(9s)
+attr unit s
+par Aloha.host[8] slotTime 0s
+attr unit s
+par Aloha.host[8] x 478.392m
+attr unit m
+par Aloha.host[8] y 926.438m
+attr unit m
+par Aloha.host[8] idleAnimationSpeed 1
+par Aloha.host[8] transmissionEdgeAnimationSpeed 1e-06
+par Aloha.host[8] midTransmissionAnimationSpeed 0.1
+par Aloha.host[8] controlAnimationSpeed true
+par Aloha.host[9] typename "\"Host\""
+par Aloha.host[9] txRate 9600bps
+attr unit bps
+par Aloha.host[9] pkLenBits 952b
+attr unit b
+par Aloha.host[9] iaTime exponential(9s)
+attr unit s
+par Aloha.host[9] slotTime 0s
+attr unit s
+par Aloha.host[9] x 555.356m
+attr unit m
+par Aloha.host[9] y 146.525m
+attr unit m
+par Aloha.host[9] idleAnimationSpeed 1
+par Aloha.host[9] transmissionEdgeAnimationSpeed 1e-06
+par Aloha.host[9] midTransmissionAnimationSpeed 0.1
+par Aloha.host[9] controlAnimationSpeed true
+par Aloha typename "\"Aloha\""
+par Aloha numHosts 10
+par Aloha txRate 9600bps
+attr unit bps
+par Aloha slotTime 0ms
+attr unit ms
+

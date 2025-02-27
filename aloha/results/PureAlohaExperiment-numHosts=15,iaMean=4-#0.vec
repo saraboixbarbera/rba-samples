@@ -1,0 +1,309 @@
+version 3
+run PureAlohaExperiment-12-20250227-23:02:19-1160
+attr configname PureAlohaExperiment
+attr datetime 20250227-23:02:19
+attr datetimef 20250227-230219
+attr experiment PureAlohaExperiment
+attr inifile omnetpp.ini
+attr iterationvars "$numHosts=15, $iaMean=4"
+attr iterationvarsd numHosts=15/iaMean=4
+attr iterationvarsf numHosts=15,iaMean=4-
+attr measurement "$numHosts=15, $iaMean=4"
+attr network Aloha
+attr processid 1160
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 12
+attr seedset 12
+itervar iaMean 4
+itervar numHosts 15
+config description "Channel utilization in the function of packet generation frequency"
+config repeat 1
+config sim-time-limit 10s
+config Aloha.numHosts 15
+config Aloha.host[*].iaTime exponential(4s)
+config network Aloha
+config Aloha.numHosts 20
+config Aloha.slotTime 0s
+config Aloha.txRate 9.6kbps
+config Aloha.host[*].pkLenBits 952b
+config **.x "uniform(0m, 1000m)"
+config **.y "uniform(0m, 1000m)"
+config **.animationHoldTimeOnCollision 0s
+config **.idleAnimationSpeed 1
+config **.transmissionEdgeAnimationSpeed 1e-6
+config **.midTransmissionAnimationSpeed 1e-1
+
+vector 0 Aloha.server serverChannelState:vector ETV
+attr enum IDLE=0,TRANSMISSION=1,COLLISION=2
+attr recordingmode vector
+attr source channelState
+attr title "Channel state"
+vector 1 Aloha.server channelUtilization:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source timeavg(receive)
+attr title "channel utilization"
+vector 2 Aloha.host[0] radioState:vector ETV
+attr enum IDLE=0,TRANSMIT=1
+attr recordingmode vector
+attr source state
+attr title "Radio state"
+vector 3 Aloha.host[1] radioState:vector ETV
+attr enum IDLE=0,TRANSMIT=1
+attr recordingmode vector
+attr source state
+attr title "Radio state"
+vector 4 Aloha.host[2] radioState:vector ETV
+attr enum IDLE=0,TRANSMIT=1
+attr recordingmode vector
+attr source state
+attr title "Radio state"
+vector 5 Aloha.host[3] radioState:vector ETV
+attr enum IDLE=0,TRANSMIT=1
+attr recordingmode vector
+attr source state
+attr title "Radio state"
+vector 6 Aloha.host[4] radioState:vector ETV
+attr enum IDLE=0,TRANSMIT=1
+attr recordingmode vector
+attr source state
+attr title "Radio state"
+vector 7 Aloha.host[5] radioState:vector ETV
+attr enum IDLE=0,TRANSMIT=1
+attr recordingmode vector
+attr source state
+attr title "Radio state"
+vector 8 Aloha.host[6] radioState:vector ETV
+attr enum IDLE=0,TRANSMIT=1
+attr recordingmode vector
+attr source state
+attr title "Radio state"
+vector 9 Aloha.host[7] radioState:vector ETV
+attr enum IDLE=0,TRANSMIT=1
+attr recordingmode vector
+attr source state
+attr title "Radio state"
+vector 10 Aloha.host[8] radioState:vector ETV
+attr enum IDLE=0,TRANSMIT=1
+attr recordingmode vector
+attr source state
+attr title "Radio state"
+vector 11 Aloha.host[9] radioState:vector ETV
+attr enum IDLE=0,TRANSMIT=1
+attr recordingmode vector
+attr source state
+attr title "Radio state"
+vector 12 Aloha.host[10] radioState:vector ETV
+attr enum IDLE=0,TRANSMIT=1
+attr recordingmode vector
+attr source state
+attr title "Radio state"
+vector 13 Aloha.host[11] radioState:vector ETV
+attr enum IDLE=0,TRANSMIT=1
+attr recordingmode vector
+attr source state
+attr title "Radio state"
+vector 14 Aloha.host[12] radioState:vector ETV
+attr enum IDLE=0,TRANSMIT=1
+attr recordingmode vector
+attr source state
+attr title "Radio state"
+vector 15 Aloha.host[13] radioState:vector ETV
+attr enum IDLE=0,TRANSMIT=1
+attr recordingmode vector
+attr source state
+attr title "Radio state"
+vector 16 Aloha.host[14] radioState:vector ETV
+attr enum IDLE=0,TRANSMIT=1
+attr recordingmode vector
+attr source state
+attr title "Radio state"
+0	0	0	0
+0	2	0.084119836927	1
+0	4	0.183286503594	0
+0	6	0.494430030738	1
+0	8	0.581077908233	2
+0	11	0.6802445749	0
+0	13	0.700829397745	1
+0	15	0.799996064412	0
+0	17	1.194396236849	1
+0	19	1.293562903516	0
+0	21	2.077257723568	1
+0	23	2.176424390235	0
+0	25	2.435601402569	1
+0	27	2.534768069236	0
+0	29	2.657287540809	1
+0	31	2.756454207476	0
+0	33	3.212186632274	1
+0	35	3.311353298941	0
+0	37	3.312581312229	1
+0	39	3.411747978896	0
+0	41	3.440668063729	1
+0	43	3.539834730396	0
+0	45	4.065712354331	1
+0	47	4.16317051975	2
+0	50	4.262337186417	0
+0	52	4.479957194648	1
+0	54	4.579123861315	0
+0	56	4.612169649551	1
+0	58	4.711336316218	0
+0	60	4.725229642479	1
+0	62	4.779381938468	2
+0	65	4.878548605135	0
+0	67	5.252293282962	1
+0	69	5.351459949629	0
+0	71	5.429604257267	1
+0	73	5.528770923934	0
+0	75	5.535526098323	1
+0	77	5.63469276499	0
+0	79	5.681359421836	1
+0	81	5.780526088503	0
+0	83	5.785204610324	1
+0	85	5.846388146069	2
+0	88	5.945554812736	0
+0	90	6.411822209382	1
+0	92	6.46314237297	2
+0	95	6.562309039637	0
+0	97	6.762295615022	1
+0	99	6.861462281689	0
+0	101	6.981213352645	1
+0	103	7.080380019312	0
+0	105	7.281498754725	1
+0	107	7.321348145308	2
+0	110	7.420514811975	0
+0	112	7.599010153192	1
+0	114	7.698176819859	0
+0	116	9.430133524423	1
+0	118	9.448793251341	2
+0	120	9.51214030411	2
+0	123	9.531392639939	2
+0	127	9.630559306606	0
+0	129	9.785994803401	1
+0	131	9.803233269785	2
+0	134	9.902399936452	0
+1	4	0.084119836927	0
+1	4	0.183286503594	0.54104729329479
+1	15	0.700829397745	0.14149901100907
+1	15	0.799996064412	0.24791788629582
+1	19	1.194396236849	0.16605321351081
+1	19	1.293562903516	0.22998495024275
+1	23	2.077257723568	0.14321766462854
+1	23	2.176424390235	0.18225612084101
+1	27	2.435601402569	0.1628618977841
+1	27	2.534768069236	0.19561290019108
+1	31	2.657287540809	0.18659378246437
+1	31	2.756454207476	0.21585702326861
+1	35	3.212186632274	0.18523207650011
+1	35	3.311353298941	0.20963231766632
+1	39	3.312581312229	0.20955460447306
+1	39	3.411747978896	0.23252987566588
+1	43	3.440668063729	0.23057537624719
+1	43	3.539834730396	0.25213041511211
+1	54	4.479957194648	0.19922065350741
+1	54	4.579123861315	0.21656253394841
+1	58	4.612169649551	0.21501088251742
+1	58	4.711336316218	0.23153374332076
+1	69	5.252293282962	0.20768705679014
+1	69	5.351459949629	0.22236922469849
+1	73	5.429604257267	0.21916882771176
+1	73	5.528770923934	0.23317418724842
+1	77	5.535526098323	0.23288963754711
+1	77	5.63469276499	0.24639024543878
+1	81	5.681359421836	0.24436639723972
+1	81	5.780526088503	0.25732951936045
+1	99	6.762295615022	0.21996967963078
+1	99	6.861462281689	0.23124322506389
+1	103	6.981213352645	0.22727663323323
+1	103	7.080380019312	0.23809927274254
+1	114	7.599010153192	0.22184906972796
+1	114	7.698176819859	0.23187308394908
+2	0	0	0
+2	32	3.212184213684	1
+2	34	3.311350880351	0
+2	104	7.281496336135	1
+2	108	7.380663002802	0
+3	0	0	0
+3	119	9.512139049975	1
+3	125	9.611305716642	0
+4	0	0	0
+4	28	2.657285972639	1
+4	30	2.756452639306	0
+4	122	9.531391071769	1
+4	126	9.630557738436	0
+5	0	0	0
+5	55	4.612169084934	1
+5	57	4.711335751601	0
+5	70	5.42960369265	1
+5	72	5.528770359317	0
+5	78	5.681358857219	1
+5	80	5.780525523886	0
+5	96	6.762295050405	1
+5	98	6.861461717072	0
+6	0	0	0
+6	84	5.846385248579	1
+6	87	5.945551915246	0
+7	0	0	0
+8	0	0	0
+8	12	0.700828119475	1
+8	14	0.799994786142	0
+8	66	5.252292004692	1
+8	68	5.351458671359	0
+8	100	6.981212074375	1
+8	102	7.080378741042	0
+8	111	7.599008874922	1
+8	113	7.698175541589	0
+8	128	9.785993525131	1
+8	132	9.885160191798	0
+9	0	0	0
+9	24	2.43559856685	1
+9	26	2.534765233517	0
+9	40	3.44066522801	1
+9	42	3.539831894677	0
+9	46	4.163167684031	1
+9	49	4.262334350698	0
+9	51	4.479954358929	1
+9	53	4.579121025596	0
+9	115	9.430130688704	1
+9	121	9.529297355371	0
+10	0	0	0
+10	82	5.785204359083	1
+10	86	5.88437102575	0
+10	130	9.803233018544	1
+10	133	9.902399685211	0
+11	0	0	0
+11	36	3.312580432163	1
+11	38	3.41174709883	0
+11	61	4.779381058402	1
+11	64	4.878547725069	0
+12	0	0	0
+12	1	0.084117494704	1
+12	3	0.183284161371	0
+12	16	1.194393894626	1
+12	18	1.293560561293	0
+12	44	4.065710012108	1
+12	48	4.164876678775	0
+12	117	9.448790909118	1
+12	124	9.547957575785	0
+13	0	0	0
+13	91	6.463139734975	1
+13	94	6.562306401642	0
+13	106	7.321345507313	1
+13	109	7.42051217398	0
+14	0	0	0
+14	7	0.581075106582	1
+14	10	0.680241773249	0
+14	74	5.535523296672	1
+14	76	5.634689963339	0
+15	0	0	0
+16	0	0	0
+16	5	0.494428453127	1
+16	9	0.593595119794	0
+16	20	2.077256145957	1
+16	22	2.176422812624	0
+16	59	4.725228064868	1
+16	63	4.824394731535	0
+16	89	6.411820631771	1
+16	93	6.510987298438	0
+
