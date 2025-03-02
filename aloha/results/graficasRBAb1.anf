@@ -9,7 +9,7 @@
         <input pattern="RBAAloha-#2.vec"/>
     </inputs>
     <charts>
-        <chart icon="icons/full/obj/histogramchart.png" id="720584581" name="collision length in Aloha.server" template="histogramchart_native" type="HISTOGRAM">
+        <chart createdWith="" icon="icons/full/obj/histogramchart.png" id="720584581" name="collision length in Aloha.server" resultTypes="" template="histogramchart_native" type="HISTOGRAM">
             <script><![CDATA[from omnetpp.scave import results, chart, utils
 
 # get chart properties
@@ -567,7 +567,7 @@ Show over_underflow cell?
             <property name="image_export_width" value="6"/>
             <property name="include_fields" value="false"/>
         </chart>
-        <chart icon="icons/full/obj/histogramchart.png" id="616430837" name="collision length in Aloha.server (2)" template="histogramchart_native" type="HISTOGRAM">
+        <chart createdWith="" icon="icons/full/obj/histogramchart.png" id="616430837" name="collision length in Aloha.server (2)" resultTypes="" template="histogramchart_native" type="HISTOGRAM">
             <script><![CDATA[from omnetpp.scave import results, chart, utils
 
 # get chart properties
@@ -1125,7 +1125,7 @@ Show over_underflow cell?
             <property name="image_export_width" value="6"/>
             <property name="include_fields" value="false"/>
         </chart>
-        <chart icon="icons/full/obj/histogramchart.png" id="167554506" name="collision length in Aloha.server (3)" template="histogramchart_native" type="HISTOGRAM">
+        <chart createdWith="" icon="icons/full/obj/histogramchart.png" id="167554506" name="collision length in Aloha.server (3)" resultTypes="" template="histogramchart_native" type="HISTOGRAM">
             <script><![CDATA[from omnetpp.scave import results, chart, utils
 
 # get chart properties
@@ -1683,7 +1683,7 @@ Show over_underflow cell?
             <property name="image_export_width" value="6"/>
             <property name="include_fields" value="false"/>
         </chart>
-        <chart icon="icons/full/obj/histogramchart.png" id="264925210" name="collision length in Aloha.server (4)" template="histogramchart_native" type="HISTOGRAM">
+        <chart createdWith="" icon="icons/full/obj/histogramchart.png" id="264925210" name="collision length in Aloha.server (4)" resultTypes="" template="histogramchart_native" type="HISTOGRAM">
             <script><![CDATA[from omnetpp.scave import results, chart, utils
 
 # get chart properties
@@ -2241,7 +2241,7 @@ Show over_underflow cell?
             <property name="image_export_width" value="6"/>
             <property name="include_fields" value="false"/>
         </chart>
-        <chart icon="icons/full/obj/linechart.png" id="2089776158" name="channel utilization in Aloha.server" template="linechart_mpl" type="MATPLOTLIB">
+        <chart createdWith="" icon="icons/full/obj/linechart.png" id="2089776158" name="channel utilization in Aloha.server" resultTypes="" template="linechart_mpl" type="MATPLOTLIB">
             <script><![CDATA[import math
 from omnetpp.scave import results, chart, utils
 
